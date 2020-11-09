@@ -1,5 +1,6 @@
 import {
   GraphQLBoolean,
+  GraphQLFloat,
   GraphQLID,
   GraphQLInt,
   GraphQLNonNull,
@@ -34,6 +35,11 @@ const TemplateScaleValue = new GraphQLObjectType<any, GQLContext>({
       description: 'true if the value of this scale is a special value, e.g., ? or X',
       type: new GraphQLNonNull(GraphQLBoolean),
       resolve: ({isSpecial}) => !!isSpecial
+    },
+    sortOrder: {
+      type: new GraphQLNonNull(GraphQLFloat),
+      description: 'the order of the scale value in this scale',
+      resolve: ({$value}) => $value
     }
   })
 })

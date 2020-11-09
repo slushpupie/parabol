@@ -3630,6 +3630,18 @@ export interface IPokerTemplate {
    * The dimensions that are part of this template
    */
   dimensions: Array<ITemplateDimension>;
+
+  /**
+   * A query for the dimension
+   */
+  dimension: ITemplateDimension;
+}
+
+export interface IDimensionOnPokerTemplateArguments {
+  /**
+   * The dimension ID for the desired dimension
+   */
+  dimensionId: string;
 }
 
 /**
@@ -3776,6 +3788,11 @@ export interface ITemplateScaleValue {
    * true if the value of this scale is a special value, e.g., ? or X
    */
   isSpecial: boolean;
+
+  /**
+   * the order of the scale value in this scale
+   */
+  sortOrder: number;
 }
 
 /**
@@ -5464,6 +5481,11 @@ export interface IPokerMeetingSettings {
   teamScales: Array<ITemplateScale>;
 
   /**
+   * A query for the scale
+   */
+  scale: ITemplateScale | null;
+
+  /**
    * The list of templates used to start a Poker meeting
    */
   teamTemplates: Array<IPokerTemplate>;
@@ -5482,6 +5504,13 @@ export interface IPokerMeetingSettings {
    * The list of templates shared across the organization to start a Poker meeting
    */
   publicTemplates: IPokerTemplateConnection;
+}
+
+export interface IScaleOnPokerMeetingSettingsArguments {
+  /**
+   * The scale ID for the desired scale
+   */
+  scaleId: string;
 }
 
 export interface IOrganizationTemplatesOnPokerMeetingSettingsArguments {
