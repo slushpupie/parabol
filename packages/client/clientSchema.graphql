@@ -36,6 +36,7 @@ extend type RetrospectiveMeeting {
 
 extend type Team {
   teamMemberFilter: TeamMember
+  editingScaleId: ID
 }
 
 extend type User {
