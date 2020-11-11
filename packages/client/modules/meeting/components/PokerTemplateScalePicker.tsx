@@ -65,7 +65,8 @@ const PokerTemplateScalePicker = (props: Props) => {
     {
       isDropdown: true,
       id: 'scaleDropdown',
-      parentId: 'templateModal'
+      parentId: 'templateModal',
+      loadingWidth: 300
     }
   )
   return (
