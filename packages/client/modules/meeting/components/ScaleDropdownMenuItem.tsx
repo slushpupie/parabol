@@ -27,7 +27,8 @@ const ScaleNameAndValues = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   paddingTop: 12,
-  paddingLeft: 16
+  paddingLeft: 16,
+  paddingBottom: 12
 })
 
 const ScaleName = styled('div')({
